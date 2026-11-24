@@ -1,15 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mantenimineto De Envios</title>
+    <link rel="stylesheet" href="./CSS/styles.css">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
-    <nav id="Nav">
+    <nav id="navTitulo">
         <h3>Productos</h3>
-        <input type="text" placeholder="Buscar...">
-        <button>TEMP</button>
+
+        <div id="headFiller"></div>
+
+        <div id="navSearch">
+            <input type="text" placeholder="Buscar...">
+            <img src="./IMG/notif.png" alt="notificacion">
+        </div>
     </nav>
     <aside id="Aside">
         <ul>
@@ -24,37 +39,82 @@
     <main>
         <section>
             <section>
-                <h1>Resultados</h1>
-                <p>Consulta y gestiona tus pedidos, productos y clientes.</p>
-                <p>Fecha desde</p>
-                <select name="" id=""></select>
-                <p>Fecha Hasta</p>
-                <select name="" id=""></select>
-                <p>Estado</p>
-                <select name="" id=""></select>
-                <p>Cliente</p>
-                <input type="text">
-                <button>Aplicar filtros</button>
-                <button>Datos de envio</button>
-                <button>Lista de productos</button>
-                <button>Datos de clientes</button>
+                <div id="titulo">
+                    <h1>Resultados</h1>
+                    <p>Consulta y gestiona tus pedidos, productos y clientes.</p>
+                </div>
+                <div id="filtrado">
+                    <div>
+                        <label>Fecha desde</label>
+                        <select name="fechaDesde" id="fechaDesde">
+                            <option value="">Seleccionar</option>
+                            <option value="hoy">Hoy</option>
+                            <option value="semana">Esta semana</option>
+                            <option value="mes">Este mes</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label>Fecha hasta</label>
+                        <select name="fechaHasta" id="fechaHasta">
+                            <option value="">Seleccionar</option>
+                            <option value="hoy">Hoy</option>
+                            <option value="semana">Esta semana</option>
+                            <option value="mes">Este mes</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label>Estado</label>
+                        <select name="estado" id="estado">
+                            <option value="">Todos</option>
+                            <option value="pendiente">Pendiente</option>
+                            <option value="enviado">Enviado</option>
+                            <option value="entregado">Entregado</option>
+                            <option value="cancelado">Cancelado</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label>Cliente</label>
+                        <input type="text" placeholder="Buscar cliente..." id="clienteInput">
+                    </div>
+                    <button type="button" id="aplicarFiltros">Aplicar filtros</button>
+                </div>
+                <div id="menu2">
+                    <button class="active">Datos de envío</button>
+                    <button>Lista de productos</button>
+                    <button>Datos de clientes</button>
+                </div>
             </section>
             <section>
-                <section>
-                    <p>Resultados (0 Pedidos)</p><p>Mostrar</p><select></select>
+                <section class="results-header">
+                    <p>Resultados (0 Pedidos)</p>
+                    <div>
+                        <label>Mostrar</label>
+                        <select name="mostrar" id="mostrar">
+                            <option value="10">10 por página</option>
+                            <option value="25">25 por página</option>
+                            <option value="50">50 por página</option>
+                            <option value="100">100 por página</option>
+                        </select>
+                    </div>
                 </section>
-                <section>
-                    <input type="checkbox">
+                <section class="table-header">
+                    <input type="checkbox" id="selectAll">
                     <p>ID</p>
                     <p>PRODUCTO</p>
-                    <P>CLIENTE</P>
-                    <P>ESTADO</P>
-                    <P>FECHA</P>
-                    <P>ACCIONES</P>
+                    <p>CLIENTE</p>
+                    <p>ESTADO</p>
+                    <p>FECHA</p>
+                    <p>ACCIONES</p>
+                </section>
+                <section class="table-body" id="tableBody">
+                    <div class="empty-state">
+                        <p>No hay pedidos para mostrar</p>
+                    </div>
                 </section>
             </section>
         </section>
     </main>
 
 </body>
+
 </html>
