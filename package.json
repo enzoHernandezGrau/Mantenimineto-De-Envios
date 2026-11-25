@@ -1,0 +1,25 @@
+{
+  "name": "pagina-web",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/enzoHernandezGrau/Mantenimineto-De-Envios.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/enzoHernandezGrau/Mantenimineto-De-Envios/issues"
+  },
+  "homepage": "https://github.com/enzoHernandezGrau/Mantenimineto-De-Envios#readme",
+  "devDependencies": {
+    "electron": "^45.3.3"
+  }
+}
